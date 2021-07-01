@@ -1,0 +1,51 @@
+P =
+
+    2.7188
+
+
+I =
+
+    0.4700
+
+
+D =
+
+    0.6452
+
+Note: always make sure you use the corresponding remoteApi library
+(i.e. 32bit Matlab will not work with 64bit remoteApi, and vice-versa)
+Starting
+Ending
+
+P =
+
+    2.9224
+
+
+I =
+
+    0.4520
+
+
+D =
+
+    0.5893
+
+Note: always make sure you use the corresponding remoteApi library
+(i.e. 32bit Matlab will not work with 64bit remoteApi, and vice-versa)
+Starting
+Ending
+
+P =
+
+    3.0721
+
+
+I =
+
+    0.4656
+
+
+D =
+
+    0.6260
