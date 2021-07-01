@@ -21,6 +21,7 @@ Foi desenvolvido um controlador PID para ajuste automático da trajetória do ve
 Foi desenvolvido um controlador de comportamentos baseado em lógica fuzzy para o robô móvel em um ambiente com obstáculos. O robô possuia sensores ultrassônicos na frente e laterais, que foram utilizados para detectar obstáculos. O controlador continha a lógica necessária para o robô explorar o ambiente desviando de obstáculos até chegar ao destino desejado.
 
 ![TesteFuzzy1](https://user-images.githubusercontent.com/22371807/124192435-a9e3d980-da9b-11eb-8e35-a1105ecffa7b.png)
+
 ![TesteFuzzy5](https://user-images.githubusercontent.com/22371807/124192441-ac463380-da9b-11eb-9bb0-efa7f2b31278.png)
 
 # Atividade 4 - Projeto de um Sensor de Erro de Trajetória para um Robô Seguidor de Linha
