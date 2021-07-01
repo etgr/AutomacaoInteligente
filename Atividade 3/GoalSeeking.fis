@@ -1,0 +1,64 @@
+[System]
+Name='GoalSeeking'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=10
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='GoalDistance'
+Range=[0 10]
+NumMFs=3
+MF1='Medium':'trimf',[0 5 10]
+MF2='Far':'trimf',[5 10 15]
+MF3='Near':'trimf',[-5 0 5]
+
+[Input2]
+Name='SteeringAng'
+Range=[-180 180]
+NumMFs=7
+MF1='NB':'trapmf',[-234 -180 -90 -60]
+MF2='NM':'trimf',[-90 -60 -30]
+MF3='NS':'trimf',[-60 -30 0]
+MF4='ZE':'trimf',[-30 0 30]
+MF5='PS':'trimf',[0 30 60]
+MF6='PM':'trimf',[30 60 90]
+MF7='PB':'trapmf',[60 90 180 234]
+
+[Output1]
+Name='TurnAng'
+Range=[-30 30]
+NumMFs=7
+MF1='LB':'trimf',[-45 -30 -15]
+MF2='LM':'trimf',[-22.5 -15 -7.5]
+MF3='LS':'trimf',[-15 -7.5 0]
+MF4='ZE':'trimf',[-7.5 0 7.5]
+MF5='RS':'trimf',[0 7.5 15]
+MF6='RM':'trimf',[7.5 15 22.5]
+MF7='RB':'trimf',[15 30 45]
+
+[Output2]
+Name='LinVel'
+Range=[0 0.2]
+NumMFs=3
+MF1='Slow':'trimf',[-0.1 0 0.1]
+MF2='Medium':'trimf',[0 0.1 0.2]
+MF3='Fast':'trimf',[0.1 0.2 0.3]
+
+[Rules]
+3 0, 0 1 (1) : 1
+1 0, 0 2 (1) : 1
+2 0, 0 3 (1) : 1
+0 4, 4 0 (1) : 1
+0 1, 1 0 (1) : 1
+0 2, 2 0 (1) : 1
+0 3, 3 0 (1) : 1
+0 5, 5 0 (1) : 1
+0 6, 6 0 (1) : 1
+0 7, 7 0 (1) : 1

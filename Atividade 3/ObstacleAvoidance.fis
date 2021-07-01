@@ -1,0 +1,64 @@
+[System]
+Name='ObstacleAvoidance'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=12
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='FrontObstacleDist'
+Range=[0 1]
+NumMFs=3
+MF1='Small':'trapmf',[-1 0 0.25 0.5]
+MF2='Medium':'trimf',[0.25 0.5 0.75]
+MF3='Large':'trapmf',[0.5 0.75 1 2]
+
+[Input2]
+Name='SideObstacleDist'
+Range=[-1 1]
+NumMFs=5
+MF1='RL':'trapmf',[-2 -1 -0.5 -0.25]
+MF2='RS':'trimf',[-0.5 -0.25 0]
+MF3='ZE':'trimf',[-0.05 0 0.05]
+MF4='LS':'trimf',[0 0.25 0.5]
+MF5='LL':'trapmf',[0.25 0.5 1 2]
+
+[Output1]
+Name='TurnAng'
+Range=[-30 30]
+NumMFs=7
+MF1='LB':'trimf',[-45 -30 -15]
+MF2='LM':'trimf',[-22.5 -15 -7.5]
+MF3='LS':'trimf',[-15 -7.5 0]
+MF4='ZE':'trimf',[-7.5 0 7.5]
+MF5='RS':'trimf',[0 7.5 15]
+MF6='RM':'trimf',[7.5 15 22.5]
+MF7='RB':'trimf',[15 30 45]
+
+[Output2]
+Name='LinVel'
+Range=[0 0.2]
+NumMFs=3
+MF1='Slow':'trimf',[-0.1 0 0.1]
+MF2='Medium':'trimf',[0 0.1 0.2]
+MF3='Fast':'trimf',[0.1 0.2 0.3]
+
+[Rules]
+1 1, 1 1 (1) : 1
+1 2, 1 1 (1) : 1
+1 4, 7 1 (1) : 1
+1 5, 7 1 (1) : 1
+2 1, 2 2 (1) : 1
+2 2, 2 2 (1) : 1
+2 4, 6 2 (1) : 1
+2 5, 6 2 (1) : 1
+3 1, 3 3 (1) : 1
+3 2, 3 3 (1) : 1
+3 4, 5 3 (1) : 1
+3 5, 5 3 (1) : 1

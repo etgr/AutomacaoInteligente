@@ -1,0 +1,45 @@
+[dialog]
+     caption = "Fuzzy Logic 2.0 Installation"
+     line0   = "Installing Fuzzy Logic 2.0"
+     line1   = "Setup will install Fuzzy Logic 2.0 into the following directory, which it will create on your hard disk."
+     line2   = "To install Fuzzy Logic 2.0 in a different directory or drive, type the name of the directory you want."
+     line3   = "All of the sections have been selected. Unselect any section you do not want installed, then click Continue to begin installation."
+     complete = "Installation is complete."
+[data]
+     setuptype   = 3
+     defdir = C:\Fuzzy
+     shortname = FuzzyLogic
+     listbox = yes
+     executable = exes, TBOOK.EXE
+     readme = readme.txt
+     modifyautoexec = no
+[sections]
+     exes, "Fuzzy Executables", select
+     apps, "Fuzzy Logic Application", select, protect
+[disks]
+    1 =.,"DISK_1"
+    2 =.,"DISK_2"
+[needed.space]
+    exes = 1000000
+    apps = 5000000
+[destinations]
+     exes,    "0:"
+     apps,    "0:"
+[exes]
+     1:TBOOK.EXE, "Fuzzy Executables"
+     1:TBKBASE.DLL 
+     1:TBKUTIL.DLL 
+     1:TBKNET.EXE  
+     1:TBKCOMP.DLL 
+[apps]
+    1:Fuzzy2.ICO
+    1:ReadMe.TXT
+    2:Fuzzy.TBK, "Fuzzy Logic", Save
+    1:Fuzzy2.TBK,,,0:Fuzzy.TBK
+[progman.groups]
+     Fuzzy Logic, Fuzzy.GRP
+[Fuzzy Logic]
+    "Fuzzy Logic", apps, Fuzzy.TBK, Fuzzy2.ICO
+[win.ini]
+    Extensions, tbk = "TBOOK.EXE ^.TBK"
+    Tbook, startupBook = Fuzzy.TBK 
