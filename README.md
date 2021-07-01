@@ -48,7 +48,9 @@ Nessas atividades foram aplicadas técnicas de sintonia de controladores proporc
 Nessa atividade, uma rede neural foi treinada para calcular o erro de trajetória baseada nos dados dos sensores. O conjunto de dados foi obtido no simulador posicionando o robô de diversas formas, afim de obter diferentes valores dos sensores e erros de trajetória. O MATLAB foi utilizado para treinar uma rede feedforward com esses dados, e os resultados de erro de trajetória foram comparados com os algoritmos da atividade 4.
 
 ![estruturaRN](https://user-images.githubusercontent.com/22371807/124193997-2d062f00-da9e-11eb-882f-96ffa4639ace.PNG)
-![desempRNgamma](https://user-images.githubusercontent.com/22371807/124194012-31324c80-da9e-11eb-8aee-945bacbfe00b.png)
+
+
+![desempRNtheta](https://user-images.githubusercontent.com/22371807/124194258-9d14b500-da9e-11eb-8637-0b9a9da4df08.png)
 
 ![testeRN](https://user-images.githubusercontent.com/22371807/124194121-5fb02780-da9e-11eb-9d2d-463d86842d85.png)
 
